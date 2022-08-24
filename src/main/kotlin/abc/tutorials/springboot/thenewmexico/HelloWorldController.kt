@@ -11,10 +11,14 @@ class HelloWorldController {
 
     @GetMapping("/a")
 //GetMappingはメソッドのURLを指定
-    fun helloWorld(): String = "Hello, this is a REST endpoint!"
+    fun helloWorld(): String {
+        return "Hello, this is a REST endpoint!"
+    }
 
     @GetMapping("/b")
-    fun goodMorning(): String = "Good morning!"
+    fun goodMorning(): String {
+        return "Good morning!"
+    }
 
 
 }

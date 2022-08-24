@@ -4,5 +4,5 @@ import abc.tutorials.springboot.thenewmexico.model.Bank
 
 interface BankDataSource {
 
-    fun retriveBanks(): Collection<Bank>
+    fun retrieveBanks(): Collection<Bank>
 }

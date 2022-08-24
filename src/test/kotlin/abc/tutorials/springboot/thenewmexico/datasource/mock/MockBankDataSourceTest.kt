@@ -1,7 +1,6 @@
 package abc.tutorials.springboot.thenewmexico.datasource.mock
 
 import org.assertj.core.api.Assertions.*
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 internal class MockBankDataSourceTest {
@@ -15,7 +14,7 @@ internal class MockBankDataSourceTest {
 
 
         // when
-        val banks = mockDataSource.getBanks()
+        val banks = mockDataSource.retrieveBanks()
 
 
         // then
@@ -25,7 +24,7 @@ internal class MockBankDataSourceTest {
     @Test
     fun should_provide_some_mock_data() {
         // when
-        val banks = mockDataSource.getBanks()
+        val banks = mockDataSource.retrieveBanks()
 
         // then
         assertThat(banks).allMatch { it.accountNumber.isNotBlank() }
