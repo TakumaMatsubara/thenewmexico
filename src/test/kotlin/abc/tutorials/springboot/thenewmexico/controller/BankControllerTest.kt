@@ -14,6 +14,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity.status
+import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.web.servlet.*
 
 @SpringBootTest
@@ -185,6 +186,7 @@ internal class BankControllerTest @Autowired constructor(
     inner class DeleteExistingBank {
     
         @Test
+        @DirtiesContext
         fun `should delete the bank with the given account number`() {
             // given
             val accountNumber = 1234
