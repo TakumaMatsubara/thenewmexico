@@ -4,7 +4,7 @@ import abc.tutorials.springboot.thenewmexico.datasource.BankDataSource
 import abc.tutorials.springboot.thenewmexico.model.Bank
 import org.springframework.stereotype.Repository
 
-@Repository
+@Repository("mock")
 class MockBankDataSource : BankDataSource {
 
     val banks = mutableListOf(
